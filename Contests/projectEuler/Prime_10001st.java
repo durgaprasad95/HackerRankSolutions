@@ -6,13 +6,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Prime_10001st {
-
 	static boolean primeCheck(boolean flag, int num) {
 		int factorsCount = 1;
 		boolean result = true;
-		if (num == 1)
+		if (num == 1 || num == 4)
 			return false;
-		if (num == 2)
+		if (num == 2 || num == 5)
 			return true;
 		for (int i = 3; num != 1 && i <= (int) Math.ceil(Math.sqrt(num)); i = i + 2) {
 			if (i % 5 == 0)
