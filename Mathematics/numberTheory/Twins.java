@@ -48,8 +48,9 @@ public class Twins {
 		for (int i = n; i <= m; i++) {
 			if (primeCheck(unitsDigitCheck(i), i)) {
 				presentPrime = i;
-				if ((presentPrime - previousPrime) == 2)
+				if ((previousPrime != 0) && ((presentPrime - previousPrime) == 2)) {
 					result++;
+				}
 				previousPrime = presentPrime;
 			}
 		}
